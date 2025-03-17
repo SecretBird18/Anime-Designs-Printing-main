@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Designs Printing</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body >
+    <header>
+        <div class="logo">
+            <h1>Anime Prints</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#designs">Designs</a></li>
+                <li><a href="#customize">Customize</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <video autoplay muted loop>
+                <source src="https://coverr.co/videos/cyberpunk-night-scene-H0vLf6X9Xx" type="video/mp4">
+            </video><br>
+            <a href="#designs" class="btn">Browse Designs</a>
+        </div>
+    </section>
+
+    <section id="designs" class="designs">
+        <h2>Featured Designs</h2>
+        <div class="design-grid">
+            <div class="design-item">
+                <img src="./img/an1.png" alt="Design 1">
+                <p>Design 1</p>
+                <button class="btn">Customize</button>
+            </div>
+            <div class="design-item">
+                <img src="./img/an2.png" alt="Design 2">
+                <p>Design 2</p>
+                <button class="btn">Customize</button>
+            </div>
+            <div class="design-item">
+                <img src="./img/an4.png" alt="Design 3">
+                <p>Design 3</p>
+                <button class="btn">Customize</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="customize" class="customize">
+        <h2>Customize Your Design</h2>
+        <form>
+            <label for="design-select">Choose a Design:</label>
+            <select id="design-select">
+                <option value="design1">Design 1</option>
+                <option value="design2">Design 2</option>
+                <option value="design3">Design 3</option>
+            </select>
+
+            <label for="product-type">Product Type:</label>
+            <select id="product-type">
+                <option value="t-shirt">T-Shirt</option>
+                <option value="phone-case">Phone Case</option>
+            </select>
+
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="s">Small</option>
+                <option value="m">Medium</option>
+                <option value="l">Large</option>
+            </select>
+
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Anime Prints. All rights reserved.</p>
+    </footer>
+</body>
+</html>
