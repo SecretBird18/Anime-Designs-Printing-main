@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,600&display=swap');
 :root {
     --header-height: 3.5rem;
 
@@ -117,6 +117,15 @@ body.dark-theme {
 }
 
 /*========== Button Dark/Light ==========*/
+
+.carousel-inner img {
+    width: 50%;
+    height: 80vh;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+}
+
 .change-theme {
     color: var(--title-color);
     font-size: 1.25rem;
@@ -588,28 +597,7 @@ body.dark-theme {
 }
 
 
-/*=============== SCROLL UP ===============*/
-.scrollup {
-    position: fixed;
-    right: 1rem;
-    bottom: -30%;
-    background-color: var(--container-color);
-    box-shadow: 0 4px 12px hsla(0, 0%, 20%, .1);
-    display: inline-flex;
-    padding: .25rem;
-    z-index: var(--z-tooltip);
-    opacity: .8;
-    transition: .4s;
-}
 
-.scrollup:hover {
-    opacity: 1;
-}
-
-.scrollup__icon {
-    font-size: 1.5rem;
-    color: var(--first-color);
-}
 
 /* Show Scroll Up*/
 .show-scroll {
@@ -995,9 +983,7 @@ body.dark-theme {
         margin-left: auto;
         margin-right: auto;
     }
-    .scrollup {
-        right: 3rem;
-    }
+   
 }
 #cart {
     background-color: rgb(252, 246, 246);
