@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt E-commerce - Sign In</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="script.js" defer></script> <!-- Link to external JavaScript -->
+</head>
+<body>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        
+    }
+    
+    header {
+        text-align: center;
+        padding: 20px;
+        background-color: #007bff;
+        color: white;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    h2 {
+        color: #007bff;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    
+    #crud-operations {
+        margin-top: 20px;
+    }
+    
+    #crud-operations .btn {
+        margin-right: 10px;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }</style>
+    <header>
+        <h1>T-Shirt E-commerce</h1>
+        <p>Sign In to Manage Your Personal Information</p>
+    </header>
+
+    <main>
+        <!-- Sign-In Form -->
+        <section id="sign-in-section">
+            <h2>Sign In</h2>
+            <form id="sign-in-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+        </section>
+
+        <!-- CRUD Operations -->
+        <section id="crud-section">
+            <h2>Manage Personal Information</h2>
+            <div id="crud-operations">
+                <button id="create-btn" class="btn">Create</button>
+                <button id="read-btn" class="btn">Read</button>
+                <button id="update-btn" class="btn">Update</button>
+                <button id="delete-btn" class="btn">Delete</button>
+            </div>
+            <div id="crud-result">
+                <!-- Results from CRUD operations will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 T-Shirt E-commerce. All rights reserved.</p>
+    </footer>
+    ><script>// Handle Sign-In Form Submission
+        document.getElementById("sign-in-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+        
+            // Simulate sign-in logic
+            alert(`Signed in with Email: ${email}`);
+        });
+        
+        // CRUD Operations
+        document.getElementById("create-btn").addEventListener("click", function () {
+            alert("Create operation triggered!");
+            // Add logic to create a new record in MongoDB
+        });
+        
+        document.getElementById("read-btn").addEventListener("click", function () {
+            alert("Read operation triggered!");
+            // Add logic to read records from MongoDB
+        });
+        
+        document.getElementById("update-btn").addEventListener("click", function () {
+            alert("Update operation triggered!");
+            // Add logic to update a record in MongoDB
+        });
+        
+        document.getElementById("delete-btn").addEventListener("click", function () {
+            alert("Delete operation triggered!");
+            // Add logic to delete a record from MongoDB
+        });</script>
+</body>
+</html>

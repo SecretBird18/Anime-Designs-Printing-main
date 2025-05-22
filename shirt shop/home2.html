@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Designs Printing - High Quality Anime Merchandise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #ff4d89;
+            --secondary: #6c5ce7;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --gray: #636e72;
+            --light-gray: #dfe6e9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn.primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn.primary:hover {
+            background-color: #ff2d6d;
+            transform: translateY(-2px);
+        }
+        
+        .btn.secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn.secondary:hover {
+            background-color: #5649d6;
+            transform: translateY(-2px);
+        }
+        
+        /* Header Styles */
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary);
+        }
+        
+        .user-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .user-actions button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: var(--dark);
+            transition: color 0.3s ease;
+        }
+        
+        .user-actions button:hover {
+            color: var(--primary);
+        }
+        
+        .cart-count {
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            position: relative;
+            top: -8px;
+            left: -5px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 0;
+        }
+        
+        .hero-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .hero-slider {
+            height: 400px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slider-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        
+        .slider-item.active {
+            opacity: 1;
+        }
+        
+        /* Featured Products */
+        .featured-products {
+            padding: 60px 0;
+        }
+        
+        .featured-products h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        
+        .product-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background: none;
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .quick-view {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .product-item:hover .quick-view {
+            opacity: 1;
+        }
+        
+        .product-item h4 {
+            padding: 15px 15px 5px;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px 15px;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .rating {
+            color: #ffc107;
+        }
+        
+        .rating span {
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+        
+        .product-item .btn {
+            width: 100%;
+            border-radius: 0;
+            padding: 12px;
+            background-color: var(--light-gray);
+            color: var(--dark);
+        }
+        
+        .product-item .btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .view-all {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        /* Custom Design Section */
+        .custom-design {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .custom-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .custom-content p {
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+        
+        .custom-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .custom-features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .custom-features i {
+            color: var(--primary);
+        }
+        
+        .design-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+            opacity: 0.5;
+        }
+        
+        .step.active {
+            opacity: 1;
+        }
+        
+        .step span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: calc(50% + 20px);
+            right: 20px;
+            height: 2px;
+            background-color: var(--light-gray);
+            z-index: -1;
+        }
+        
+        .step.active:not(:last-child)::after {
+            background-color: var(--primary);
+        }
+        
+        .design-preview {
+            height: 300px;
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .design-preview img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        
+        /* Anime Collections */
+        .anime-collections {
+            padding: 60px 0;
+        }
+        
+        .anime-collections h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        
+        .collection-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .collection-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .collection-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .collection-item h4 {
+            padding: 15px 10px;
+        }
+        
+        .collection-item.view-all {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-gray);
+            cursor: pointer;
+        }
+        
+        .collection-item.view-all:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .collection-item.view-all i {
+            font-size: 1.5rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .testimonials h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            text-align: center;
+            padding: 30px;
+            display: none;
+        }
+        
+        .testimonial.active {
+            display: block;
+        }
+        
+        .testimonial .rating {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .customer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .customer img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            padding: 60px 0;
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .newsletter h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+        }
+        
+        .newsletter-form button {
+            border-radius: 0 30px 30px 0;
+            padding: 15px 25px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        .main-footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h5 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-col p, .footer-col li {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-col a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-col a:hover {
+            opacity: 1;
+        }
+        
+        .footer-col.about p {
+            margin-bottom: 25px;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .footer-col.contact li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .cta-buttons {
+                justify-content: center;
+            }
+            
+            .custom-design {
+                grid-template-columns: 1fr;
+            }
+            
+            .custom-content {
+                text-align: center;
+            }
+            
+            .custom-features {
+                max-width: 300px;
+                margin: 0 auto 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .product-filters {
+                gap: 10px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 30px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/50x50" alt="Anime Designs Printing Logo" class="logo">
+                <h1>Anime Designs Printing</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#designs">Anime Designs</a></li>
+                    <li><a href="#custom">Custom Prints</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+                <button class="account-btn"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Bring Your Favorite Anime to Life</h2>
+                <p>High-quality prints of popular and custom anime designs on various products</p>
+                <div class="cta-buttons">
+                    <button class="btn primary">Shop Now</button>
+                    <button class="btn secondary">Create Custom Design</button>
+                </div>
+            </div>
+            <div class="hero-slider">
+                <div class="slider-item active" style="background-image: url('https://via.placeholder.com/600x400')"></div>
+                <div class="slider-item" style="background-image: url('https://via.placeholder.com/600x400/6c5ce7')"></div>
+                <div class="slider-item" style="background-image: url('https://via.placeholder.com/600x400/ff4d89')"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="products">
+        <div class="container">
+            <h3>Popular Anime Prints</h3>
+            <div class="product-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">T-Shirts</button>
+                <button class="filter-btn">Posters</button>
+                <button class="filter-btn">Phone Cases</button>
+                <button class="filter-btn">Hoodies</button>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product Item 1 -->
+                <div class="product-item">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300')">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <h4>Naruto Uzumaki T-Shirt</h4>
+                    <div class="product-meta">
+                        <span class="price">$24.99</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(128)</span>
+                        </div>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                
+                <!-- Product Item 2 -->
+                <div class="product-item">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300/6c5ce7')">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <h4>Demon Slayer Poster</h4>
+                    <div class="product-meta">
+                        <span class="price">$19.99</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(95)</span>
+                        </div>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                
+                <!-- Product Item 3 -->
+                <div class="product-item">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300/ff4d89')">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <h4>One Piece Phone Case</h4>
+                    <div class="product-meta">
+                        <span class="price">$15.99</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(76)</span>
+                        </div>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                
+                <!-- Product Item 4 -->
+                <div class="product-item">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300/00cec9')">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <h4>Attack on Titan Hoodie</h4>
+                    <div class="product-meta">
+                        <span class="price">$39.99</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(142)</span>
+                        </div>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <button class="btn view-all primary">View All Products</button>
+        </div>
+    </section>
+
+    <!-- Custom Design Section -->
+    <section class="custom-design" id="custom">
+        <div class="container">
+            <div class="custom-content">
+                <h3>Create Your Own Anime Design</h3>
+                <p>Upload your artwork or work with our designers to create a unique anime print just for you!</p>
+                <ul class="custom-features">
+                    <li><i class="fas fa-check"></i> 100% Original Designs</li>
+                    <li><i class="fas fa-check"></i> High-Quality Printing</li>
+                    <li><i class="fas fa-check"></i> Fast Turnaround</li>
+                </ul>
+                <button class="btn primary">Start Custom Order</button>
+            </div>
+            <div class="custom-preview">
+                <div class="design-steps">
+                    <div class="step active">
+                        <span>1</span>
+                        <p>Upload Design</p>
+                    </div>
+                    <div class="step">
+                        <span>2</span>
+                        <p>Select Products</p>
+                    </div>
+                    <div class="step">
+                        <span>3</span>
+                        <p>Review & Order</p>
+                    </div>
+                </div>
+                <div class="design-preview">
+                    <img src="https://via.placeholder.com/400x300" alt="Custom Design Preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anime Series Collection -->
+    <section class="anime-collections" id="designs">
+        <div class="container">
+            <h3>Shop By Anime Series</h3>
+            <div class="collection-grid">
+                <div class="collection-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Naruto Collection">
+                    <h4>Naruto</h4>
+                </div>
+                <div class="collection-item">
+                    <img src="https://via.placeholder.com/300x300/6c5ce7" alt="Demon Slayer Collection">
+                    <h4>Demon Slayer</h4>
+                </div>
+                <div class="collection-item">
+                    <img src="https://via.placeholder.com/300x300/ff4d89" alt="One Piece Collection">
+                    <h4>One Piece</h4>
+                </div>
+                <div class="collection-item">
+                    <img src="https://via.placeholder.com/300x300/00cec9" alt="Attack on Titan Collection">
+                    <h4>Attack on Titan</h4>
+                </div>
+                <div class="collection-item">
+                    <img src="https://via.placeholder.com/300x300/fdcb6e" alt="My Hero Academia Collection">
+                    <h4>My Hero Academia</h4>
+                </div>
+                <div class="collection-item view-all">
+                    <div>
+                        <i class="fas fa-chevron-right"></i>
+                        <p>View All Series</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h3>What Our Customers Say</h3>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The print quality is amazing! My Demon Slayer hoodie looks even better than I expected."</p>
+                    <div class="customer">
+                        <img src="https://via.placeholder.com/50x50" alt="Customer Photo">
+                        <span>Sarah K.</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>"Great customer service and fast shipping. Will definitely order again!"</p>
+                    <div class="customer">
+                        <img src="https://via.placeholder.com/50x50" alt="Customer Photo">
+                        <span>Michael T.</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The custom design service is fantastic. They brought my OC to life perfectly!"</p>
+                    <div class="customer">
+                        <img src="https://via.placeholder.com/50x50" alt="Customer Photo">
+                        <span>Jessica L.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Join Our Anime Community</h3>
+                <p>Subscribe to get exclusive designs, special offers, and anime news!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn primary">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <h5>About Anime Designs Printing</h5>
+                    <p>We're passionate about anime and dedicated to bringing high-quality anime designs to fans worldwide through premium printing services.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+                
+                <div class="footer-col links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Custom Designs</a></li>
+                        <li><a href="#">Anime Series</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col customer-service">
+                    <h5>Customer Service</h5>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col contact">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@animeprint.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Otaku Street, Tokyo, Japan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Anime Designs Printing. All rights reserved.</p>
+                <p>All anime imagery is copyright of their respective owners. We claim no ownership.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-item');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Testimonial Slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        
+        function showTestimonial(n) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            currentTestimonial = (n + testimonials.length) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
+        }
+        
+        function nextTestimonial() {
+            showTestimonial(currentTestimonial + 1);
+        }
+        
+        // Change testimonial every 7 seconds
+        setInterval(nextTestimonial, 7000);
+        
+        // Product Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                // In a real implementation, you would filter products here
+            });
+        });
+        
+        // Add to Cart functionality
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartCount = document.querySelector('.cart-count');
+        let cartItems = 0;
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartItems++;
+                cartCount.textContent = cartItems;
+                
+                // Animation
+                button.textContent = 'Added!';
+                setTimeout(() => {
+                    button.textContent = 'Add to Cart';
+                }, 1000);
+            });
+        });
+        
+        // Newsletter Form Submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = newsletterForm.querySelector('input').value;
+            alert(`Thank you for subscribing with ${email}! You'll receive our newsletter soon.`);
+            newsletterForm.reset();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

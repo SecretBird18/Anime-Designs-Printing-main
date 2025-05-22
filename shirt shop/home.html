@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniPrint - Anime Designs Printing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9fafb;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+        }
+        
+        .anime-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link:hover {
+            color: #d946ef;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .print-option:hover {
+            background-color: #f3f4f6;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #8b5cf6;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7c3aed;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-dragon text-purple-600 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-gray-900">AniPrint</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 font-medium">Home</a>
+                    
+                    <div class="dropdown relative">
+                        <button class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 font-medium flex items-center">
+                            Products <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-1 w-48 z-50">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-50">T-Shirts</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-50">Hoodies</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-50">Posters</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-50">Phone Cases</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-50">Mugs</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 font-medium">Custom Design</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 font-medium">Gallery</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 font-medium">About</a>
+                    
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-gray-700 hover:text-purple-600">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-purple-600">
+                            <i class="fas fa-user text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700 hover:text-purple-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 py-20 md:py-28">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Bring Your Favorite Anime to Life</h1>
+                    <p class="text-xl mb-8">High-quality prints of your favorite anime characters on t-shirts, hoodies, posters and more. Custom designs available!</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#" class="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                            Shop Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#" class="border-2 border-white hover:bg-white hover:text-purple-600 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                            Create Custom Design
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://i.imgur.com/JQJZQJz.png" alt="Anime Characters" class="w-full max-w-md rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Check out our most popular anime designs loved by fans worldwide</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="anime-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://i.imgur.com/7QJQJQJ.jpg" alt="Naruto T-Shirt" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition duration-300"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="bg-white rounded-full p-2 shadow-md hover:bg-purple-100">
+                                <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Naruto Uzumaki T-Shirt</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">(128)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$24.99</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded-full text-sm">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="anime-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://i.imgur.com/8QJQJQJ.jpg" alt="Demon Slayer Hoodie" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition duration-300"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="bg-white rounded-full p-2 shadow-md hover:bg-purple-100">
+                                <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Demon Slayer Hoodie</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">(256)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$39.99</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded-full text-sm">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="anime-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://i.imgur.com/9QJQJQJ.jpg" alt="Attack on Titan Poster" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition duration-300"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="bg-white rounded-full p-2 shadow-md hover:bg-purple-100">
+                                <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Attack on Titan Poster</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">(312)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$14.99</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded-full text-sm">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="anime-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://i.imgur.com/6QJQJQJ.jpg" alt="My Hero Academia Phone Case" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition duration-300"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="bg-white rounded-full p-2 shadow-md hover:bg-purple-100">
+                                <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">My Hero Academia Phone Case</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">(89)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$19.99</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded-full text-sm">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Design Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Create Your Own Anime Design</h2>
+                    <p class="text-gray-600 mb-6">Upload your favorite anime artwork or let our designers create something unique for you. Print it on any product you like!</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                            <span class="text-gray-700">High-quality printing technology</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                            <span class="text-gray-700">Fast turnaround time (3-5 business days)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                            <span class="text-gray-700">100% satisfaction guarantee</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition duration-300">
+                        Start Designing <i class="fas fa-paint-brush ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Design Options</h3>
+                        <div class="space-y-4">
+                            <div class="print-option flex items-center p-4 border rounded-lg cursor-pointer transition duration-200">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-tshirt text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">T-Shirts</h4>
+                                    <p class="text-gray-600 text-sm">From $19.99</p>
+                                </div>
+                            </div>
+                            
+                            <div class="print-option flex items-center p-4 border rounded-lg cursor-pointer transition duration-200">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-vest text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Hoodies</h4>
+                                    <p class="text-gray-600 text-sm">From $34.99</p>
+                                </div>
+                            </div>
+                            
+                            <div class="print-option flex items-center p-4 border rounded-lg cursor-pointer transition duration-200">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-image text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Posters</h4>
+                                    <p class="text-gray-600 text-sm">From $12.99</p>
+                                </div>
+                            </div>
+                            
+                            <div class="print-option flex items-center p-4 border rounded-lg cursor-pointer transition duration-200">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-mobile-alt text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone Cases</h4>
+                                    <p class="text-gray-600 text-sm">From $16.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CGPA Calculator Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">CGPA Calculator</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Calculate your CGPA easily with our calculator tool</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden">
+                <div class="gradient-bg p-6 text-white">
+                    <h3 class="text-xl font-bold">Enter Your Grades</h3>
+                    <p class="text-purple-100">Add your courses and grades to calculate your CGPA</p>
+                </div>
+                
+                <div class="p-6">
+                    <div id="courses-container">
+                        <div class="course-item mb-4">
+                            <div class="grid grid-cols-12 gap-4">
+                                <div class="col-span-7">
+                                    <input type="text" placeholder="Course Name" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                </div>
+                                <div class="col-span-3">
+                                    <input type="number" placeholder="Credits" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                </div>
+                                <div class="col-span-2">
+                                    <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                        <option value="">Grade</option>
+                                        <option value="4.0">A (4.0)</option>
+                                        <option value="3.7">A- (3.7)</option>
+                                        <option value="3.3">B+ (3.3)</option>
+                                        <option value="3.0">B (3.0)</option>
+                                        <option value="2.7">B- (2.7)</option>
+                                        <option value="2.3">C+ (2.3)</option>
+                                        <option value="2.0">C (2.0)</option>
+                                        <option value="1.7">C- (1.7)</option>
+                                        <option value="1.3">D+ (1.3)</option>
+                                        <option value="1.0">D (1.0)</option>
+                                        <option value="0.0">F (0.0)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between mt-6">
+                        <button id="add-course" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg">
+                            <i class="fas fa-plus mr-2"></i> Add Course
+                        </button>
+                        <button id="calculate" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-bold">
+                            Calculate CGPA <i class="fas fa-calculator ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <div id="result" class="mt-8 hidden">
+                        <div class="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-info-circle text-purple-600 text-xl"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h3 class="text-lg font-bold text-gray-900">Your CGPA Result</h3>
+                                    <div class="mt-2">
+                                        <p class="text-gray-700">Total Credits: <span id="total-credits" class="font-bold">0</span></p>
+                                        <p class="text-gray-700">Total Grade Points: <span id="total-grade-points" class="font-bold">0</span></p>
+                                        <p class="text-gray-700 mt-2">Your CGPA is: <span id="cgpa-result" class="text-2xl font-bold text-purple-600">0.00</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from anime fans who love our products</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.imgur.com/1QJQJQJ.jpg" alt="Customer" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sarah K.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The quality of the Demon Slayer hoodie I ordered exceeded my expectations! The colors are vibrant and the fabric is so comfortable. Will definitely order again!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.imgur.com/2QJQJQJ.jpg" alt="Customer" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Michael T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"I got a custom design made of my favorite anime character and the result was amazing! The printing is crisp and the colors pop. Highly recommend their custom service!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.imgur.com/3QJQJQJ.jpg" alt="Customer" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Jessica L.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The shipping was super fast and the packaging was secure. The Attack on Titan poster I ordered looks exactly like the product image. Very happy with my purchase!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+                    <p class="text-purple-100 max-w-md">Subscribe to our newsletter for exclusive offers, new product announcements, and anime-related content!</p>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300 text-gray-900">
+                        <button type="submit" class="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Subscribe <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    <p class="text-purple-100 text-sm mt-3">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-dragon text-purple-500 mr-2"></i> AniPrint
+                    </h3>
+                    <p class="text-gray-400 mb-4">Bringing your favorite anime characters to life through high-quality prints on various products.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-500">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Shop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Custom Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Gallery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Products -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">T-Shirts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Hoodies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Posters</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Phone Cases</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Mugs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-500 transition">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-purple-500 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Anime Street, Tokyo, Japan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-purple-500 mr-3"></i>
+                            <span class="text-gray-400">+1 (234) 567-8900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-purple-500 mr-3"></i>
+                            <span class="text-gray-400">support@aniprint.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 AniPrint. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-purple-500">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-purple-500">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-purple-500">Shipping Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-purple-500">Returns & Refunds</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-purple-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // CGPA Calculator Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add course button
+            const addCourseBtn = document.getElementById('add-course');
+            const coursesContainer = document.getElementById('courses-container');
+            
+            addCourseBtn.addEventListener('click', function() {
+                const courseItem = document.createElement('div');
+                courseItem.className = 'course-item mb-4';
+                courseItem.innerHTML = `
+                    <div class="grid grid-cols-12 gap-4">
+                        <div class="col-span-7">
+                            <input type="text" placeholder="Course Name" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                        </div>
+                        <div class="col-span-3">
+                            <input type="number" placeholder="Credits" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                        </div>
+                        <div class="col-span-2">
+                            <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                <option value="">Grade</option>
+                                <option value="4.0">A (4.0)</option>
+                                <option value="3.7">A- (3.7)</option>
+                                <option value="3.3">B+ (3.3)</option>
+                                <option value="3.0">B (3.0)</option>
+                                <option value="2.7">B- (2.7)</option>
+                                <option value="2.3">C+ (2.3)</option>
+                                <option value="2.0">C (2.0)</option>
+                                <option value="1.7">C- (1.7)</option>
+                                <option value="1.3">D+ (1.3)</option>
+                                <option value="1.0">D (1.0)</option>
+                                <option value="0.0">F (0.0)</option>
+                            </select>
+                        </div>
+                    </div>
+                `;
+                coursesContainer.appendChild(courseItem);
+            });
+            
+            // Calculate CGPA
+            const calculateBtn = document.getElementById('calculate');
+            const resultDiv = document.getElementById('result');
+            
+            calculateBtn.addEventListener('click', function() {
+                const courseItems = document.querySelectorAll('.course-item');
+                let totalCredits = 0;
+                let totalGradePoints = 0;
+                let hasError = false;
+                
+                courseItems.forEach(item => {
+                    const creditsInput = item.querySelector('input[type="number"]');
+                    const gradeSelect = item.querySelector('select');
+                    
+                    const credits = parseFloat(creditsInput.value) || 0;
+                    const grade = parseFloat(gradeSelect.value) || 0;
+                    
+                    if (credits <= 0 || isNaN(grade)) {
+                        hasError = true;
+                        if (credits <= 0) {
+                            creditsInput.classList.add('border-red-500');
+                        } else {
+                            creditsInput.classList.remove('border-red-500');
+                        }
+                        
+                        if (isNaN(grade)) {
+                            gradeSelect.classList.add('border-red-500');
+                        } else {
+                            gradeSelect.classList.remove('border-red-500');
+                        }
+                    } else {
+                        creditsInput.classList.remove('border-red-500');
+                        gradeSelect.classList.remove('border-red-500');
+                        
+                        totalCredits += credits;
+                        totalGradePoints += credits * grade;
+                    }
+                });
+                
+                if (hasError) {
+                    alert('Please enter valid credits and select grades for all courses.');
+                    return;
+                }
+                
+                if (totalCredits === 0) {
+                    alert('Please add at least one course with valid credits and grade.');
+                    return;
+                }
+                
+                const cgpa = totalGradePoints / totalCredits;
+                
+                document.getElementById('total-credits').textContent = totalCredits;
+                document.getElementById('total-grade-points').textContent = totalGradePoints.toFixed(2);
+                document.getElementById('cgpa-result').textContent = cgpa.toFixed(2);
+                
+                resultDiv.classList.remove('hidden');
+                
+                // Scroll to result
+                resultDiv.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Mobile menu toggle (placeholder)
+            const mobileMenuBtn = document.querySelector('.md\\:hidden button');
+            mobileMenuBtn.addEventListener('click', function() {
+                alert('Mobile menu would open here in a complete implementation.');
+            });
+        });
+    </script>
+</body>
+</html>
